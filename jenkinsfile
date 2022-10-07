@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  tools {
+    terraform 'terraform'
+  }
   options {
     skipDefaultCheckout(true)
   }
@@ -16,7 +19,7 @@ pipeline {
     }
     stage('terraform') {
       steps {
-        sh 'terraform apply -auto-approve -no-color'
+        sh 'terraform plan -auto-approve -no-color'
       }
     }
   }
