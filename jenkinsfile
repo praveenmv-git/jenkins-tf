@@ -22,9 +22,9 @@ pipeline {
         sh 'terraform plan'
       }
     }
-    stage('terraform') {
+    stage('terraform apply') {
       steps {
-        sh './terraformw apply -auto-approve -no-color'
+        sh 'terraform apply -auto-approve -no-color'
       }
     }
   } 
