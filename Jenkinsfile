@@ -17,7 +17,7 @@ pipeline {
         checkout scm
         sh 'export AWS_ACCESS_KEY_ID     = credentials(jenkins-aws-secret-key-id)'
         sh 'export AWS_SECRET_ACCESS_KEY = credentials(jenkins-aws-secret-access-key)'
-        sh 'export AWS_DEFAULT_REGION = credentials(jenkins-aws-region)''
+        sh 'export AWS_DEFAULT_REGION = credentials(jenkins-aws-region)'
       }
     }
     stage('terraform init') {
