@@ -5,7 +5,7 @@ pipeline {
     }
   }
   tools {
-    terraform 'terraform'
+    terraform 'terraformlinux'
   }
   options {
     skipDefaultCheckout(true)
