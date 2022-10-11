@@ -1,5 +1,9 @@
 pipeline {
-  agent linuxagent
+  agent {
+    node {
+      label 'linuxagent'
+    }
+  }
   tools {
     terraform 'terraform'
   }
