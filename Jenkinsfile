@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent linuxagent
   tools {
     terraform 'terraform'
   }
